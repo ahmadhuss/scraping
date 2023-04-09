@@ -124,3 +124,42 @@ We will see a lot of output in the Terminal, please search and find following te
 ```
 
 It means the spider has run successfully.
+
+**Notes:**
+
+`//h1`
+
+double slash `h1` allow us to select tags anywhere in the page without starting from the
+top level e.g. `/html/body/div/h1`  of the tree hierarchy of HTML.
+
+`//div/h1`
+
+This will select only the `h1` tags that are immediate children of the `div` tag.
+
+
+`//div//h1`
+
+This would select an `h1` tag that falls anywhere under a `div` tag, regardless of whether or not it was an immediate child.
+
+`span[@class="title"]`
+
+This would select element by attribute using this `[@class="title"]` symbol.
+
+`//span[@class="title"]`
+
+This will select any `span` tags that have the class `"title"` or the attribute of the `span` tag is equal to the string `title` e.g. `class="title"`.
+
+**Case:**
+
+We can also select the text from the attribute of the tags themselves, so if we wanted to select the `id` attribute
+we do `@id`, and this will select the `value` of the `id` attribute where the class attribute is `"title"`.
+
+`//span[@class="title"]/@id`
+
+but if we don't want the attribute text or attribute value, What we want the inner text from the tags. For this we will use XPath selector `/text()`.
+
+`//span[@class="title"]/text()`
+
+
+
+
